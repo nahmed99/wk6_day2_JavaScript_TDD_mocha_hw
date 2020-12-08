@@ -28,6 +28,8 @@ describe('Decorator', function () {
 
         // Assert
         assert.strictEqual(actual_stock, 0)    // (actual, expected)
+
+        //For the above assertI could have used "deepStrictEqual", but only if I had compared it against an emplty list - []. However, I used the length function...
     });
 
 
