@@ -3,4 +3,15 @@ const Paint = function (quantity) {
 }
 
 
+
+Paint.prototype.emptyItself = function () {
+    this.quantity = 0;
+}
+
+
+Paint.prototype.checkIfEmpty = function () {
+    return this.quantity === 0;
+}
+
+
 module.exports = Paint;

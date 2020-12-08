@@ -29,4 +29,44 @@ describe('Paint', function () {
     });
 
 
+
+    it("should be able to check if it is empty - false", function() {
+        // Arrange
+        // Already done above with 'let room' and the beforeEach() function.
+
+        // Act
+        const actual_emptyStatus = paint.checkIfEmpty();
+
+        // Assert
+        assert.strictEqual(actual_emptyStatus, false)    // (actual, expected)
+    });
+
+
+    it("should be able to empty itself of paint", function() {
+        // Arrange
+        paint.emptyItself();
+
+        // Act
+        const actual_quantity = paint.quantity;
+
+        // Assert
+        assert.strictEqual(actual_quantity, 0)    // (actual, expected)
+    });
+
+
+    it("should be able to check if it is empty - true", function() {
+        // Arrange
+        paint.emptyItself();  //empty the can of paint
+
+        // Act
+        const actual_emptyStatus = paint.checkIfEmpty();
+
+        // Assert
+        assert.strictEqual(actual_emptyStatus, true)    // (actual, expected)
+    });
+
+
+
+
+
 })
