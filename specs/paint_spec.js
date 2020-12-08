@@ -16,10 +16,10 @@ describe('Paint', function () {
 
 
     // These are names for the tests:
-    // xit("should have an area", function() {
+    // it("should have a number of litres", function() {
     it("should have a number of litres", function() {
         // Arrange
-        // Already done above with 'let room' and the beforeEach() function.
+        // Already done above with 'let paint' and the beforeEach() function.
 
         // Act
         const actual_quantity = paint.quantity;
@@ -64,9 +64,6 @@ describe('Paint', function () {
         // Assert
         assert.strictEqual(actual_emptyStatus, true)    // (actual, expected)
     });
-
-
-
 
 
 })
