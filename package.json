@@ -1,0 +1,19 @@
+{
+  "name": "javascript_tdd_mocha_hw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha specs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nahmed99/wk6_day2_JavaScript_TDD_mocha_hw.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nahmed99/wk6_day2_JavaScript_TDD_mocha_hw/issues"
+  },
+  "homepage": "https://github.com/nahmed99/wk6_day2_JavaScript_TDD_mocha_hw#readme"
+}
