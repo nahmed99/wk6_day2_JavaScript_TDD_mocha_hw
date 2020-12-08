@@ -114,4 +114,43 @@ describe('Decorator', function () {
     });
 
 
+    it("should be able to paint room if enough paint in stock - false", function() {
+        // Arrange
+        const paint1 = new Paint(5);
+        const paint2 = new Paint(5);
+        const paint3 = new Paint(5);
+
+        const room = new Room(25);
+
+        // Act
+        decorator.addPaint(paint1);
+        decorator.addPaint(paint2);
+        decorator.addPaint(paint3);
+        decorator.paintRoom(room);
+        const actual_isPainted = room.isPainted;
+
+        // Assert
+        assert.strictEqual(actual_isPainted, false)    // (actual, expected)
+    });
+
+
+    it("should be able to paint room if enough paint in stock - true", function() {
+        // Arrange
+        const paint1 = new Paint(10);
+        const paint2 = new Paint(10);
+        const paint3 = new Paint(10);
+
+        const room = new Room(25);
+
+        // Act
+        decorator.addPaint(paint1);
+        decorator.addPaint(paint2);
+        decorator.addPaint(paint3);
+        decorator.paintRoom(room);
+        const actual_isPainted = room.isPainted;
+
+        // Assert
+        assert.strictEqual(actual_isPainted, true)    // (actual, expected)
+    });
+
 })

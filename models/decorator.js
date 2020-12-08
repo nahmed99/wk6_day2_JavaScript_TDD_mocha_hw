@@ -32,6 +32,13 @@ Decorator.prototype.enoughPaint = function (room) {
 }
 
 
+Decorator.prototype.paintRoom = function (room) {
+    // Paint room if there is enough paint in stock to paint the room
+    if (this.totalVolumePaint() >= room.area) {
+        room.paint();
+    }
+}
+
 
 
 module.exports = Decorator;
