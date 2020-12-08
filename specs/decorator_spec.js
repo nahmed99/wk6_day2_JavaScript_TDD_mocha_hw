@@ -4,6 +4,7 @@
 const assert = require('assert');
 const Decorator = require('../models/decorator.js'); 
 const Paint = require('../models/paint.js'); 
+const Room = require('../models/room.js'); 
 
 // a function from mocha suite: describe(name_of_tests, function - inline in the case below)
 describe('Decorator', function () {
@@ -73,6 +74,44 @@ describe('Decorator', function () {
     });
 
 
+
+    it("should be able to calculate whether enough paint to paint room - false", function() {
+        // Arrange
+        const paint1 = new Paint(5);
+        const paint2 = new Paint(5);
+        const paint3 = new Paint(2.5);
+
+        const room = new Room(25);
+
+        // Act
+        decorator.addPaint(paint1);
+        decorator.addPaint(paint2);
+        decorator.addPaint(paint3);
+        const actual_isEnough = decorator.enoughPaint(room);
+
+        // Assert
+        assert.strictEqual(actual_isEnough, false)    // (actual, expected)
+    });
+
+
+
+    it("should be able to calculate whether enough paint to paint room - true", function() {
+        // Arrange
+        const paint1 = new Paint(10);
+        const paint2 = new Paint(10);
+        const paint3 = new Paint(10);
+
+        const room = new Room(25);
+
+        // Act
+        decorator.addPaint(paint1);
+        decorator.addPaint(paint2);
+        decorator.addPaint(paint3);
+        const actual_isEnough = decorator.enoughPaint(room);
+
+        // Assert
+        assert.strictEqual(actual_isEnough, true)    // (actual, expected)
+    });
 
 
 })
