@@ -11,8 +11,9 @@ describe('Room', function () {
 
     // This function will run before each 'it' function...
     beforeEach(function() {
-        room = new Room(2.5);
+        room = new Room(25);
     });
+
 
     // These are names for the tests:
     // xit("should have an area", function() {
@@ -24,7 +25,7 @@ describe('Room', function () {
         const actual_area = room.area;
 
         // Assert
-        assert.strictEqual(actual_area, 2.5)    // (actual, expected)
+        assert.strictEqual(actual_area, 25)    // (actual, expected)
     });
 
 
@@ -50,6 +51,5 @@ describe('Room', function () {
         // Assert
         assert.strictEqual(actual_isPainted, true)    // (actual, expected)
     });
-
 
 })
