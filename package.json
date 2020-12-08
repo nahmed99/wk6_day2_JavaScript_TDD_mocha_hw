@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/nahmed99/wk6_day2_JavaScript_TDD_mocha_hw/issues"
   },
-  "homepage": "https://github.com/nahmed99/wk6_day2_JavaScript_TDD_mocha_hw#readme"
+  "homepage": "https://github.com/nahmed99/wk6_day2_JavaScript_TDD_mocha_hw#readme",
+  "devDependencies": {
+    "mocha": "^8.2.1"
+  }
 }
