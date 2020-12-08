@@ -55,4 +55,24 @@ describe('Decorator', function () {
     });
 
 
+
+    it("should be able to calculate total litres paint in stock", function() {
+        // Arrange
+        const paint1 = new Paint(5);
+        const paint2 = new Paint(5);
+        const paint3 = new Paint(2.5);
+
+        // Act
+        decorator.addPaint(paint1);
+        decorator.addPaint(paint2);
+        decorator.addPaint(paint3);
+        const actual_stock = decorator.totalVolumePaint();
+
+        // Assert
+        assert.strictEqual(actual_stock, 12.5)    // (actual, expected)
+    });
+
+
+
+
 })
