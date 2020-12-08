@@ -3,6 +3,15 @@ const Decorator = function () {
 }
 
 
+Decorator.prototype.stockCount = function () {
+    return this.stock.length;
+}
+
+
+Decorator.prototype.addPaint = function (paint) {
+    this.stock.push(paint);
+}
+
 
 
 module.exports = Decorator;
