@@ -27,4 +27,16 @@ describe('Room', function () {
         assert.strictEqual(actual_area, 2.5)    // (actual, expected)
     });
 
+
+    it("should not start painted", function() {
+        // Arrange
+        // Already done above with 'let room' and the beforeEach() function.
+
+        // Act
+        const actual_isPainted = room.isPainted;
+
+        // Assert
+        assert.strictEqual(actual_isPainted, false)    // (actual, expected)
+    });
+
 })
