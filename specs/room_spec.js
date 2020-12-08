@@ -39,4 +39,17 @@ describe('Room', function () {
         assert.strictEqual(actual_isPainted, false)    // (actual, expected)
     });
 
+
+    it("should be able to be painted", function() {
+        // Arrange
+        room.paint(); // paint the room!
+
+        // Act - check room painting status
+        const actual_isPainted = room.isPainted;
+
+        // Assert
+        assert.strictEqual(actual_isPainted, true)    // (actual, expected)
+    });
+
+
 })

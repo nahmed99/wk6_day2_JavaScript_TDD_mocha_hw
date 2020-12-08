@@ -5,7 +5,8 @@ const Room = function (area, isPainted=false) {
 
 // I am only going to allow the room to be not painted at all, or is completed painted.
 Room.prototype.paint = function () {
-    return !this.isPainted;
+    this.isPainted = !this.isPainted;
+    return this.isPainted;
 }
 
 module.exports = Room;
